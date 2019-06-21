@@ -1,0 +1,210 @@
+/*Estilos por Vucamberg Santos;*/
+
+.header,.section{
+	margin:0;
+	padding:0;
+}
+.header .col, .header .row{
+	margin:0;
+}
+.c-img{
+	height:50px;
+	background-color:#fff;
+	display:flex;
+	flex-direction:row;
+	justify-content:start;
+}
+.section{
+	background-image:url('../img/bg_try.png');
+	background-repeat:no-repeat;
+	background-color:#f5f7fa;
+	text-align:center;
+}
+
+.section h1{
+	text-align:center;
+	font-size:32px;
+	color:#333;
+	max-width:60%;
+	margin:80px auto 0;
+}
+
+.section p{
+	font-size:14px;
+	color:#748296;
+	margin-bottom:7%;
+}
+
+.entrances{
+	display:inline-block;
+	max-width:60%;
+	background-color:#fff;
+	border-radius:5px;
+	padding:15px 15%;
+	margin:0 auto 0;
+	box-shadow: 0 4px 40px 0 rgba(116, 130, 150, 0.2);
+}
+
+button{
+	margin:auto;
+	min-width:260px;
+}
+
+/*[BTN] Cascata para o Materialize, sobrepor os efeitos default */
+
+.btn{
+	display:flex;
+	flex-direction:column;
+	text-align:center;
+	justify-content:center;
+	box-shadow:none;
+	height:43px;
+	text-transform:none;
+	background-color:#14e298;
+}
+.btn:hover{
+	box-shadow:none;
+	background-color:#23f7ab;
+}
+
+/*[ROW] */
+
+.c-row{
+	margin:0;
+	display:flex;
+}
+
+.c-row div{
+	display:flex;
+	justify-content:center;
+}
+
+.c-row div a{
+	margin-left:20px;
+	color:#748296;
+}
+
+footer hr{
+	height:0;
+	border-top:#ebedf0 !important;
+}
+
+@keyframes anima-label-click{
+	from{opacity:0;}
+	to{opacity:1;}
+}
+
+.c-label-click{
+	animation-name:anima-label-click;
+	animation-duration:.4s;
+	animation-fill-mode:forwards;
+    background: #ddd;
+    padding: 4% 0%;
+    font-size: 14px;
+    margin: 12px auto;
+    display: inline-block;
+    width: 100%;
+    color: #6d6c6c;
+    border-radius: 5px;
+}
+.c-button-click{
+	cursor:default;
+	background: #fff !important;
+    text-align: center !important;
+    color: #14e298!important;
+    border: 1px solid #14e298 !important;
+    justify-content: center !important;
+}
+
+.c-para-ghost{
+	opacity:0;
+	transition:.4s;
+}
+
+.c-p-ghost{
+	margin:auto;
+	max-width:80%;
+}
+
+
+/*[Focus nos INPUTs] Cascata para o Materialize, sobrepor os efeitos default*/
+
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+    background-color: transparent;
+    border: none;
+    border: 1px solid rgba(116, 130, 150, 0.2);
+    border-radius: 5px;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 0 20px 0;
+    padding: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: none;
+    -webkit-box-shadow: 0 0 0 0;
+    box-shadow: 0 0 0 0;
+}
+
+
+input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=password]:not(.browser-default):focus:not([readonly])+label, input[type=email]:not(.browser-default):focus:not([readonly])+label, input[type=url]:not(.browser-default):focus:not([readonly])+label, input[type=time]:not(.browser-default):focus:not([readonly])+label, input[type=date]:not(.browser-default):focus:not([readonly])+label, input[type=datetime]:not(.browser-default):focus:not([readonly])+label, input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label, input[type=tel]:not(.browser-default):focus:not([readonly])+label, input[type=number]:not(.browser-default):focus:not([readonly])+label, input[type=search]:not(.browser-default):focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
+    color: #000;
+}
+
+
+/*[select] */
+
+select{
+	display:block!important;
+}
+select option{
+	color:#000 !important;
+}
+#flag{
+	margin: 17px auto 0;
+}
+
+
+/* [js/validate] Muda a posição/estilos do label de erro*/
+
+.error{
+    margin-top: 35px;
+	font-size:14px !important;
+	color:red !important;
+}
+
+
+
+
+/* Medias */
+
+
+@media screen and (max-width:998px){
+	.entrances{
+		max-width:80%;
+	}
+}
+
+@media screen and (max-width:745px){
+	.entrances{
+		max-width:100%;
+	}
+	.section h1{	
+		max-width:100%;
+	}
+	.c-img{
+		justify-content:center;
+	}
+	.c-row{	
+		flex-direction:column;
+	}
+
+}

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title> Experimente grátis e aumente sua vendas - Voxus</title>
+		<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	</head>
+	<body>
+
+		<header class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<div class="c-img">
+							<img src="img/logo.svg" title="Logo Voxus" alg="Logo Voxus"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<section class="section">
+			<div class="container c-container">
+				<div class="row">
+					<div class="col s12">
+						<h1>Você está a poucos passos de otimizar suas campanhas!</h1>
+						<p>Queremos conhecer mais sobre sua empresa para melhorar sua experiência com a Voxus.</p>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col s12">
+						<div class="entrances">
+							<form id="form">
+						        <div class="input-field col s12">
+									<input id="name" name="name" type="text" class="validate">
+									<label for="name">Nome Completo</label>
+								</div>
+
+								<div>
+									<div class="col s3">
+									    <select id="flag" name="flag">
+
+											<!-- Pois bem, as bandeiras terão que ser imaginadas .. :/-->
+										  	<option value="Brasil">Brasil</option>
+										  	<option value="Dinamarca">Dinamarca</option>
+										  	<option value="Espanha">Espanha</option>
+											<option value="ReinoUnido">Reino Unido</option>
+											<option value="EstadosUnidos">Estados Unidos</option>
+    									</select>
+									</div>
+
+									<div class="col s9">
+								        <div class="input-field col s12">
+											<input id="telefone" name="telefone" type="text" class="validate">
+											<label for="telefone">Telefone</label>
+										</div>
+									</div>
+								</div>
+								
+
+						        <div class="input-field col s12">
+									<input id="mail" name="mail" type="text" class="validate">
+									<label for="mail">Endereço de e-mail</label>
+								</div>
+
+						        <div class="input-field col s12">
+									<input id="company" name="company" type="text" class="validate">
+									<label for="company">Nome da Empresa</label>
+								</div>
+
+						        <div class="input-field col s12">
+									<input id="url" name="url" type="text" class="validate">
+									<label for="url">URL do site</label>
+								</div>
+
+						        <div class=" col s12">
+										<select id="verba" name="verba">
+											<option value="" selected>Verba mensal em mídia</option>
+										  	<option value="less5mil"><= R$5.000</option>
+										  	<option value="more5less30">>= R$5.001 e <= R$30.000</option>
+										  	<option value="more30less100">>= R$30.001 e <= R$100.000</option>
+											<option value="more100less500">>= R$100.000 e <= R$500.000</option>
+											<option value="more500">>= R$500.001</option>
+											<option value="no">Não se aplica</option>
+    									</select>
+								</div>
+
+								<div class="input-field col s12">
+									<button class="waves-effect waves-light btn" type="submit">Experimentar gratuitamente</button>
+								</div>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row c-para-ghost">
+					<p class="c-p-ghost">*Para usar o trial grátis você precisa ser um e-commerce e concordar com os termos e requisitos do trial gratuito. Saiba mais em: <a href="#"> Termos e requisitos de trial gratuito</a></p>
+				</div>
+					
+
+		<footer>
+			<hr>
+			<div class="container">
+				<div class="row c-row">
+					<div>
+						<img src="img/logo_gray.svg" alt="Logo Voxus" title="Logo Voxus"/>
+					</div>
+					<div>
+						<p><a href="https://www.voxus.com.br/privacidade.html" target="_blank">Termos de serviço e politica de privacidade</a></p>
+					</div>
+					<div>
+						<p><a href="https://www.voxus.com.br/opcoes-anuncio.html" target="_blank">Opções de anúncio</a></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+
+
+		</section>
+
+
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/materialize.min.js"></script>
+		<script src="js/jquery-validate.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				//validar o form
+				$("#form").validate({
+					rules:{
+						name:{required:true},
+						telefone:{required:true},
+						mail:{required:true},
+						company:{required:true},
+						url:{required:true},
+						verba:{required:true}
+					},
+					messages:{
+						name:{required:"Este campo é obrigatório!"},
+						telefone:{required:"Este campo é obrigatório!"},
+						mail:{required:"Este campo é obrigatório!"},
+						company:{required:"Este campo é obrigatório!"},
+						url:{required:"Este campo é obrigatório!"},
+						verba:{required:"Este campo é obrigatório!"}
+					},
+					submitHandler:function(){
+						let btn=document.querySelector(".btn");
+						let inputs=document.querySelectorAll("input");
+						let selects=document.querySelectorAll("select");
+						let label=document.createElement("label");
+						//let p=document.createElement("p");
+						//let a=document.createElement("a");
+
+						label.innerText="Entraremos em contato em até 24hs úteis.";
+						label.classList.add("c-label-click");
+
+						document.querySelector("#form").appendChild(label);
+						
+						//a.innerText="Termos e requisitos de trial gratuito";
+						//a.href="";
+						//p.innerText="*Para usar o trial grátis você precisa ser um e-commerce e concordar com os termos e requisitos do trial gratuito. Saiba mais em: ";
+						//p.appendChild(a);
+
+						//document.querySelector(".c-container").appendChild(p);
+						document.querySelector(".c-para-ghost").classList.remove("c-para-ghost");
+
+						inputs.forEach((a,b,c)=>{
+							a.value="";
+						});
+						selects.forEach((a,b,c)=>{
+							a.value="";
+						});
+						
+						btn.disabled="disabled";
+						btn.classList.add("c-button-click");
+						btn.innerText="Obrigado!";
+					}
+				});
+
+  			});
+
+
+		</script>
+	</body>
+</html>
